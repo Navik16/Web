@@ -1,0 +1,727 @@
+/* General Styles */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #001f3f;
+    color: white;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Remove White Space */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+/* Navigation Bar */
+
+nav {
+    position: fixed;  /* Keeps navbar fixed at the top */
+    top: 0;           /* Aligns it to the top */
+    left: 0;          /* Aligns it to the left */
+    width: 100%;      /* Makes it span across the screen */
+    background-color: #2c3e50; /* Keeps the background color */
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensures navbar is always on top */
+    height: 50px;
+}
+
+/* Add space to body so content doesn't hide under navbar */
+body {
+    padding-top: 80px; /* Adjust this based on navbar height */
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: -60px; /* Adjust this value to move the links left */
+}
+
+nav ul li {
+    margin-right: 10px; /* Spacing between links */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-right: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hamburger Menu (Hidden by Default) */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #001f3f;
+    padding: 0.5rem 0; /* Reduce padding to remove extra space */
+    width: 100%;
+}
+.logo-section img {
+    height: 10vw;
+    max-height: 60px;
+    object-fit: contain;
+    margin: 0;
+}
+
+
+
+
+
+/* Hero Section */
+
+
+.hero {
+    text-align: center;
+    padding: 6rem 2rem 5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    max-width: 100%;
+    background: none;
+    transition: background 1s ease-in-out; /* Smooth transition */
+}
+
+
+/* Slideshow Container */
+.slideshow-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Slideshow Images */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+.prev-btn { left: 20px; }  /* Position Previous Button */
+.next-btn { right: 20px; } /* Position Next Button */
+
+.prev-btn:hover, .next-btn:hover {
+    background: transparent;
+}
+/* Show Active Slide */
+.slide.active {
+    opacity: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.hero h2 {
+    margin-top: 3rem;
+}
+.hero .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* About Us Section */
+.about {
+    width: 100%;
+    margin: 0 auto; /* Centers the section */
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 80%;
+    margin: 0 auto; /* Ensures the paragraph stays centered */
+}
+
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+    width: 100vw;
+    max-width: 100%;
+}
+
+/* Dining Options Section */
+.menu-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch; /* ensure each option takes the size of the tallest option*/
+    gap: 2rem;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+.menu-section div {
+    background: #3a5f8f;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    
+    max-width: 350px;
+    text-align: center;
+    height: auto; /* Ensures dynamis height height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* View Menu Button Styling */
+
+.menu-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #e67e22; /* Button color */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #d35400; /* Darker shade on hover */
+}
+
+.menu-section img, #activities img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Leisure Park Section */
+.leisure-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1400px; /* Match Dining Options */
+}
+
+.leisure-card {
+    background: #3a5f8f;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px; /* Match Dining Options */
+    max-width: 350px; /* Match Dining Options */
+    text-align: center;
+    height: auto; /* Adjust height dynamically */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ensure images are the same size */
+.leisure-card img {
+    width: 100%;
+    height: 200px; /* Set a uniform height for all images */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Uniform text formatting */
+.leisure-card h3 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.leisure-card p {
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+
+
+/* Book Events Section */
+#book-events {
+    text-align: center;
+    padding: 4rem 2rem 0rem;
+    width: 100%;
+    
+}
+
+.events-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1200px;
+    margin:  auto;
+}
+
+.event-card {
+    background: #3a5f8f;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ensure images are same size */
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.event-card h3 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.event-card p {
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+
+
+/* Leisure Park & Events Buttons */
+.activity-button,
+.event-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #e67e22; /* Orange color */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.activity-button:hover,
+.event-button:hover {
+    background-color: #d35400; /* Darker shade on hover */
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.gallery-images img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+
+/* Gallery Section */
+.gallery-images {
+    padding-top: 10px; /* Reduce space above gallery */
+    padding-bottom: 50px; /* Adjust this value to increase space */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+    
+}
+
+/* Center and make heading take full width */
+.gallery-images h2 {
+    width: 100%;
+    text-align: center; 
+    font-size: 2rem; /* Adjust size if needed */
+    margin-bottom: 20px; /* Space between heading and images */
+}
+
+.gallery-images img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer; /* Indicates that images are clickable */
+    transition: transform 0.3s ease;
+}
+.gallery-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox Overlay */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Lightbox Image */
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    user-select: none;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots Container */
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Dots Style */
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Active Dot */
+.dot.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+form {
+    background: #3a5f8f;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #cf6d17;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: left;
+    max-width: 400px;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+.map-link {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+.email-link {
+    color: white;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Social Media Icons Container */
+.social-icons {
+    display: flex;  /* Display icons in a row */
+    justify-content: flex-start; /* Align icons to the left */
+    gap: 10px; /* Add spacing between icons */
+    margin-top: 10px; /* Space between phone number and icons */
+}
+
+/* Style for Icons */
+.social-icon img {
+    width: 30px;  /* Adjust icon size */
+    height: 30px;
+    object-fit: contain;
+    cursor: pointer; /* Make it clear that it's clickable */
+}
+
+
+
+
+/* Footer */
+footer {
+
+    text-align: center;
+    padding: 2rem;
+    background-color: #2c3e50;
+    color: white;
+    width: 100vw;
+    max-width: 100%;
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media screen and (max-width: 768px) {
+    
+    /* Hide navigation buttons on small screens */
+
+    nav {
+        height: 40px; /* Adjusted height for small screens */
+      }
+ 
+    .nav-links { 
+        display: none; /* Hides the navigation buttons */
+    }
+
+
+
+    /* Hero Section Adjustments */
+    .hero {
+        height: 50vh;
+        background-size: contain; /* Prevent cropping */
+    }
+
+    .hero h2 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Reduce paragraph size */
+    }
+
+    .hero .btn {
+        padding: 0.5rem 1rem; /* Reduce button size */
+        font-size: 0.9rem; /* Reduce button text size */
+    }
+
+    .about
+
+    /* Ensure Sections Wrap Properly */
+    .menu-section, .leisure-section, .events-section {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-section div, .leisure-card, .event-card {
+        width: 40%;
+        max-width: 350px;
+    }
+
+    /* Lightbox Responsive Fix */
+    .lightbox-content {
+        width: 90%;
+        height: auto;
+    }
+
+    /* Contact Form Adjustments */
+    form {
+        width: 90%;
+    }
+
+    /* Resize Buttons & Text */
+    .btn, .menu-button, .event-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

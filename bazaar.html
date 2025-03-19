@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Lounge - Restaurant</title>
+    <link rel="stylesheet" href="bazaar.css">
+</head>
+<script src="bazaar.js"></script>
+<body>
+    <nav>
+        <h1>Lakeside Food Bazaar</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#stall-options">Stalls</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <h2>Authentic Indian Dining Experience</h2>
+        <p>Delight in the flavors of India with our exquisite menu, cozy ambiance, and exceptional service.</p>
+    </header>
+
+ 
+
+    <section id="stall-options">
+        <h2>Available stalls</h2>
+        <div class="stall-container">
+            <div class="stall-item">
+                <img src="res6.jpg" alt="Couple Swan Boat">
+                <h3>Couple Swan Boat</h3>
+                <p>Perfect for couples who want a romantic ride.</p>
+                <button class="view-menu-btn" data-pdf="menu.pdf">View Menu</button>
+            </div>
+
+            <div class="stall-item">
+                <img src="res7.jpg" alt="Family Boat">
+                <h3>Family Boat</h3>
+                <p>Spacious boat for families to enjoy a ride together.</p>
+                <button class="view-menu-btn" data-pdf="menu.pdf">View Menu</button>
+            </div>
+
+            <div class="stall-item">
+                <img src="res8.jpg" alt="Electric Boat">
+                <h3>Electric Boat</h3>
+                <p>A smooth and effortless ride powered by electricity.</p>
+                <button class="view-menu-btn" data-pdf="menu.pdf">View Menu</button>
+            </div>
+
+            <div class="stall-item">
+                <img src="caf1.jpg" alt="2-Person Paddle Boat">
+                <h3>2-Person Paddle Boat</h3>
+                <p>A fun ride for two people with paddle control.</p>
+                <button class="view-menu-btn" data-pdf="menu.pdf">View Menu</button>
+            </div>
+
+            <div class="stall-item">
+                <img src="caf.jpg" alt="Speed Boat">
+                <h3>Speed Boat</h3>
+                <p>For thrill-seekers who love high-speed lake adventures.</p>
+                <button class="view-menu-btn" data-pdf="menu.pdf">View Menu</button>
+            </div>
+        </div>
+        <!-- Lightbox for PDF -->
+        <div id="pdf-lightbox" class="lightbox">
+            <div class="lightbox-content">
+                <span class="close-btn">&times;</span>
+                <div class="pdf-container">
+                    <iframe class="pdf-viewer" src=""></iframe>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="gallery" class="gallery-images">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="res4.jpg" data-src="res4.jpg" alt="Gallery Image 1" >
+            <img src="res3.jpg" data-src="res3.jpg" alt="Gallery Image 2" >
+            <img src="res5.jpg" data-src="res5.jpg" alt="Gallery Image 3" >
+            <img src="res6.jpg" data-src="res6.jpg" alt="Gallery Image 4" >
+            <img src="res7.jpg" data-src="res7.jpg" alt="Gallery Image 5" >
+            <img src="res8.jpg" data-src="res8.jpg" alt="Gallery Image 5" >
+        </div>
+    
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span> <!-- Previous Button -->
+            <img class="lightbox-content" id="lightbox-img">
+            <span class="next">&#10095;</span> <!-- Next Button -->
+    
+            <!-- Dots Indicator -->
+            <div class="dots-container"></div>
+        </div>  
+    </section>
+    
+    
+    </section>
+
+
+
+    <section id="contact" class="content-section">
+        <h2>Contact & Location</h2>
+        <p>📍 123 Delhi Street, City, Country</p>
+        <p>📞 +123 456 789</p>
+        <p>🕒 Open Daily: 11 AM - 10 PM</p>
+        <a href="https://maps.google.com" class="btn">Find Us on Maps</a>
+        <a href="#" class="btn">Make a Reservation</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Delhi Lounge. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Lounge - Restaurant</title>
+    <link rel="stylesheet" href="delhi-lounge.css">
+</head>
+<script src="delhi.js"></script>
+<body>
+    <nav>
+        <h1>Delhi Lounge</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <button class="prev-btn">&#10094;</button> <!-- Left Arrow -->
+        <button class="next-btn">&#10095;</button> <!-- Right Arrow -->
+
+        <div class="slideshow-container">
+                
+                <img src="res1.jpg" class="slide active">
+                <img src="res2.jpg" class="slide">
+                <img src="res3.jpg" class="slide">
+                
+        </div> 
+
+        <h2>Authentic Indian Dining Experience</h2>
+        <p>Delight in the flavors of India with our exquisite menu, cozy ambiance, and exceptional service.</p>
+    </header>
+
+    <section id="menu" class="content-section">
+        <h2>Our Menu</h2>
+        <p>Explore a variety of traditional Indian dishes, from rich curries to freshly baked naan.</p>
+        
+        <!-- Clickable PDF Thumbnail -->
+        <a href="menu.pdf" id="menu-link">
+            <img src="menu.jpeg" alt="Delhi Lounge Menu">
+        </a>
+    
+        <!-- Lightbox for PDF -->
+        <div id="pdf-lightbox" class="lightbox">
+            <div class="lightbox-content">
+                <span class="close-btn">&times;</span>
+                <div class="pdf-container">
+                    <iframe class="pdf-viewer" src="menu.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="res4.jpg" data-src="res4.jpg" alt="Gallery Image 1" >
+            <img src="res3.jpg" data-src="res3.jpg" alt="Gallery Image 2" >
+            <img src="res5.jpg" data-src="res5.jpg" alt="Gallery Image 3" >
+            <img src="res6.jpg" data-src="res6.jpg" alt="Gallery Image 4" >
+            <img src="res7.jpg" data-src="res7.jpg" alt="Gallery Image 5" >
+            <img src="res8.jpg" data-src="res8.jpg" alt="Gallery Image 5" >
+        </div>
+    
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span> <!-- Previous Button -->
+            <img class="lightbox-content" id="lightbox-img">
+            <span class="next">&#10095;</span> <!-- Next Button -->
+    
+            <!-- Dots Indicator -->
+            <div class="dots-container"></div>
+        </div>  
+    </section>
+    
+    
+    </section>
+
+
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Get in touch with us!</p>
+        
+        <div class="contact-container">
+            <form action="https://formspree.io/f/mvgzwdav" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+    
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+    
+            <div class="contact-info">
+                <h3>Our Location</h3>
+                <p>Lake Drive Leisure Park, South Lake round, Kurunegala, Sri Lanka</p>
+                <a href="https://www.google.com/maps/dir//F9W4%2B3X6,+S+Lake+Rd,+Kurunegala,+Sri+Lanka/@7.4951524,80.274997,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ae33b714f72af69:0x4eb2d2359552bee2!2m2!1d80.3573989!2d7.4951601?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link" target="_blank">
+                    📍 View on Google Maps
+                </a>                
+                <p>Email: lakedriveleisurepark@gmail.com</p>
+                <p>Phone: +94 76 915 0150</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Delhi Lounge. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

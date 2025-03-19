@@ -1,0 +1,470 @@
+/* General Page Styling */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #001f3f;
+    color: white;
+    width: 100%;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+
+/* Navigation Bar */
+
+nav {
+    position: fixed;  /* Keeps navbar fixed at the top */
+    top: 0;           /* Aligns it to the top */
+    left: 0;          /* Aligns it to the left */
+    width: 100%;      /* Makes it span across the screen */
+    background-color: #2c3e50; /* Keeps the background color */
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensures navbar is always on top */
+    height: 50px;
+}
+
+/* Add space to body so content doesn't hide under navbar */
+body {
+    padding-top: 80px; /* Adjust this based on navbar height */
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: -60px; /* Adjust this value to move the links left */
+}
+
+nav ul li {
+    margin-right: 10px; /* Spacing between links */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Title Section */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem 5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    margin: 0;
+    max-width: 100%;
+    background: url('res1.jpg') center/cover no-repeat; /* Set initial background */
+    transition: background 1s ease-in-out; /* Smooth transition */
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Slideshow Images */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+.prev-btn { left: 20px; }  /* Position Previous Button */
+.next-btn { right: 20px; } /* Position Next Button */
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+/* Show Active Slide */
+.slide.active {
+    opacity: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.event-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.event-card {
+    background: #3a5f8f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.event-card h2 {
+    margin: 15px 0;
+    color: white;
+}
+
+.event-card p {
+    color: white;
+}
+
+
+/* Restaurant Images */
+.gallery {
+    padding-top: 10px; /* Reduce space above gallery */
+    padding-bottom: 50px; /* Adjust this value to increase space */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem;
+}
+
+/* Center and add spacing to the Gallery Section Heading */
+.gallery h2 {
+    width: 100%;
+    text-align: center;  /* Centers the text */
+    font-size: 2rem;     /* Adjusts heading size */
+    margin-bottom: 20px; /* Adds spacing between heading and images */
+}
+
+
+.gallery-container {
+    display: flex; /* Makes images appear in a row */
+    justify-content: center; /* Centers the images */
+    gap: 15px; /* Adds spacing between images */
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    overflow: hidden;
+}
+.gallery-container img {
+    width: 150px; /* Controls image size */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Adds rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05); /* Slightly enlarges images when hovered */
+}
+
+/* Lightbox Overlay */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Lightbox Image */
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    user-select: none;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots Container */
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Dots Style */
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Active Dot */
+.dot.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+/* Ensure Lightbox is centered */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Lightbox Image */
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    user-select: none;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots Container */
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Dots Style */
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Active Dot */
+.dot.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+/* Contact Section */
+#contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+form {
+    background: #3a5f8f;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #cf6d17;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: left;
+    max-width: 400px;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+.map-link {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2c3e50;
+    color: white;
+    width: 100vw;
+    max-width: 100%;
+    margin-top: 3rem;
+}
+
