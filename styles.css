@@ -665,8 +665,8 @@ footer {
 
     /* Hero Section Adjustments */
     .hero {
-        height: 100vh;
-        background-size: contain; /* Prevent cropping */
+        height: 50vh;
+        background-size: cover; /* Prevent cropping */
     }
 
     .hero h2 {
